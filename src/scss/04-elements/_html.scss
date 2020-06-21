@@ -1,4 +1,17 @@
 html {
 	/* 1rem = 10px */
 	font-size: 62.5%;
+
+	/* set all box-sizing to border-box; */
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	*,
+	*:before,
+	*:after {
+		-webkit-box-sizing: inherit;
+		-moz-box-sizing: inherit;
+		box-sizing: inherit;
+	}
 }
