@@ -1,0 +1,41 @@
+$brand-primary: #FA91BE;
+$brand-primary-support: #F7CCCE;
+
+$brand-secondary: #09978B;
+$brand-secondary-support: #B6D8CF;
+
+/*- Social Colors -*/
+$color-facebook:	#3b5998;
+$color-twitter:		#4099FF;
+$color-youtube:		#c4302b;
+$color-instagram:   #bc2a8d;
+
+$border-color: #E6E6E6;
+
+$colors: (
+	brand:(
+		base: $brand-primary,
+		base-support: $brand-primary-support,
+		secondary: $brand-secondary,
+		secondary-support: $brand-secondary-support
+	),
+	greyscale: (
+		black:		#000000,
+		xx-dark:	#1A1A1A,
+		x-dark:		#333333,
+		dark:		#4D4D4D,
+		mid-dark:	#666666,
+		base:		#808080,
+		mid-light:	#999999,
+		light:		#B3B3B3,
+		x-light:	#CCCCCC,
+		xx-light:	#E6E6E6,
+		white:	    #FFFFFF
+	),
+	red: (
+		base:		#ff0000
+	),
+	green: (
+		base:		#00ff00
+	)
+);
