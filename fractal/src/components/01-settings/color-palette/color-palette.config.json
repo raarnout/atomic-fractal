@@ -5,14 +5,14 @@
         "isFirst": true,
         "isLast": false,
 				"color": "#FA91BE",
-        "name": "$brand-primary",
+        "tone": "base",
         "tweenContent": true
 			},
 			{
         "isFirst": false,
         "isLast": true,
 				"color": "#F7CCCE",
-        "name": "$brand-primary-support",
+        "tone": "base-support",
         "tweenContent": true
 			}
     ],
@@ -21,14 +21,14 @@
 				"isFirst": true,
         "isLast": false,
 				"color": "#09978B",
-        "name": "$brand-secondary",
+        "tone": "secondary",
         "tweenContent": true
 			},
 			{
 				"isFirst": false,
         "isLast": true,
 				"color": "#B6D8CF",
-        "name": "$brand-secondary-support",
+        "tone": "secondary-support",
         "tweenContent": true
 			}
 		],
@@ -37,7 +37,7 @@
 				"isFirst": true,
         "isLast": false,
 				"color": "#000000",
-        "name": "black",
+        "tone": "black",
         "tweenContent": true,
         "isContrast": true
       },
@@ -45,7 +45,7 @@
 				"isFirst": false,
         "isLast": false,
 				"color": "#1A1A1A",
-        "name": "xx-dark",
+        "tone": "xx-dark",
         "tweenContent": true,
         "isContrast": true
 			},
@@ -53,7 +53,7 @@
 				"isFirst": false,
         "isLast": false,
 				"color": "#333333",
-        "name": "x-dark",
+        "tone": "x-dark",
         "tweenContent": true,
         "isContrast": true
 			},
@@ -61,7 +61,7 @@
 				"isFirst": false,
         "isLast": false,
 				"color": "#4D4D4D",
-        "name": "dark",
+        "tone": "dark",
         "tweenContent": true,
         "isContrast": true
 			},
@@ -69,7 +69,7 @@
 				"isFirst": false,
         "isLast": false,
 				"color": "#666666",
-        "name": "mid-dark",
+        "tone": "mid-dark",
         "tweenContent": true,
         "isContrast": true
 			},
@@ -77,7 +77,7 @@
 				"isFirst": false,
         "isLast": false,
 				"color": "#808080",
-        "name": "base",
+        "tone": "base",
         "tweenContent": true,
         "isContrast": true
 			},
@@ -85,35 +85,35 @@
 				"isFirst": false,
         "isLast": false,
 				"color": "#999999",
-        "name": "mid-light",
+        "tone": "mid-light",
         "tweenContent": true
 			},
       {
 				"isFirst": false,
         "isLast": false,
 				"color": "#B3B3B3",
-        "name": "light",
+        "tone": "light",
         "tweenContent": true
 			},
       {
 				"isFirst": false,
         "isLast": false,
 				"color": "#CCCCCC",
-        "name": "x-light",
+        "tone": "x-light",
         "tweenContent": true
 			},
       {
 				"isFirst": false,
         "isLast": false,
 				"color": "#E6E6E6",
-        "name": "xx-light",
+        "tone": "xx-light",
         "tweenContent": true
 			},
       {
 				"isFirst": false,
         "isLast": true,
 				"color": "#FFFFFF",
-        "name": "white",
+        "tone": "white",
         "tweenContent": true
 			}
 		]

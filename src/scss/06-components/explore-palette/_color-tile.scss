@@ -16,11 +16,12 @@
 		flex-grow: 1;
 	}
 
-	&__color-info {
+	&__tone {
 		flex-basis: 4rem;
 		padding: 1rem;
 		border: 1px solid $border-color;
 		border-right-width: 0;
+		font-weight: 600;
 	}
 
 	&--first-item {
