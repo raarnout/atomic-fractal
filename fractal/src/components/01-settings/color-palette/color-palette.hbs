@@ -1,0 +1,31 @@
+<div class="c-color-palette">
+	<div class="c-explore-palette">
+		<div class="c-explore-palette__strip">
+			{{#each primaryColors}}
+				<div class="c-explore-palette__tile">
+					{{> @color-tile }}
+				</div>
+			{{/each}}
+		</div>
+	</div>
+
+	<div class="c-explore-palette">
+		<div class="c-explore-palette__strip">
+			{{#each secondaryColors}}
+				<div class="c-explore-palette__tile">
+					{{> @color-tile }}
+				</div>
+			{{/each}}
+		</div>
+	</div>
+
+	<div class="c-explore-palette">
+		<div class="c-explore-palette__strip">
+			{{#each greyscaleColors}}
+				<div class="c-explore-palette__tile">
+					{{> @color-tile }}
+				</div>
+			{{/each}}
+		</div>
+	</div>
+</div>

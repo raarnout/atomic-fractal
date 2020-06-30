@@ -1,0 +1,121 @@
+{
+	"context": {
+		"primaryColors": [
+			{
+        "isFirst": true,
+        "isLast": false,
+				"color": "#FA91BE",
+        "name": "$brand-primary",
+        "tweenContent": true
+			},
+			{
+        "isFirst": false,
+        "isLast": true,
+				"color": "#F7CCCE",
+        "name": "$brand-primary-support",
+        "tweenContent": true
+			}
+    ],
+    "secondaryColors": [
+			{
+				"isFirst": true,
+        "isLast": false,
+				"color": "#09978B",
+        "name": "$brand-secondary",
+        "tweenContent": true
+			},
+			{
+				"isFirst": false,
+        "isLast": true,
+				"color": "#B6D8CF",
+        "name": "$brand-secondary-support",
+        "tweenContent": true
+			}
+		],
+    "greyscaleColors": [
+			{
+				"isFirst": true,
+        "isLast": false,
+				"color": "#000000",
+        "name": "black",
+        "tweenContent": true,
+        "isContrast": true
+      },
+      {
+				"isFirst": false,
+        "isLast": false,
+				"color": "#1A1A1A",
+        "name": "xx-dark",
+        "tweenContent": true,
+        "isContrast": true
+			},
+      {
+				"isFirst": false,
+        "isLast": false,
+				"color": "#333333",
+        "name": "x-dark",
+        "tweenContent": true,
+        "isContrast": true
+			},
+      {
+				"isFirst": false,
+        "isLast": false,
+				"color": "#4D4D4D",
+        "name": "dark",
+        "tweenContent": true,
+        "isContrast": true
+			},
+      {
+				"isFirst": false,
+        "isLast": false,
+				"color": "#666666",
+        "name": "mid-dark",
+        "tweenContent": true,
+        "isContrast": true
+			},
+      {
+				"isFirst": false,
+        "isLast": false,
+				"color": "#808080",
+        "name": "base",
+        "tweenContent": true,
+        "isContrast": true
+			},
+      {
+				"isFirst": false,
+        "isLast": false,
+				"color": "#999999",
+        "name": "mid-light",
+        "tweenContent": true
+			},
+      {
+				"isFirst": false,
+        "isLast": false,
+				"color": "#B3B3B3",
+        "name": "light",
+        "tweenContent": true
+			},
+      {
+				"isFirst": false,
+        "isLast": false,
+				"color": "#CCCCCC",
+        "name": "x-light",
+        "tweenContent": true
+			},
+      {
+				"isFirst": false,
+        "isLast": false,
+				"color": "#E6E6E6",
+        "name": "xx-light",
+        "tweenContent": true
+			},
+      {
+				"isFirst": false,
+        "isLast": true,
+				"color": "#FFFFFF",
+        "name": "white",
+        "tweenContent": true
+			}
+		]
+	}
+}
