@@ -4,14 +4,6 @@ $brand-primary-support: #F7CCCE;
 $brand-secondary: #09978B;
 $brand-secondary-support: #B6D8CF;
 
-/*- Social Colors -*/
-$color-facebook:	#3b5998;
-$color-twitter:		#4099FF;
-$color-youtube:		#c4302b;
-$color-instagram:   #bc2a8d;
-
-$border-color: #E6E6E6;
-
 $colors: (
 	brand:(
 		base: $brand-primary,
@@ -39,3 +31,11 @@ $colors: (
 		base:		#00ff00
 	)
 );
+
+/*- Social Colors -*/
+$color-facebook:	#3b5998;
+$color-twitter:		#4099FF;
+$color-youtube:		#c4302b;
+$color-instagram:   #bc2a8d;
+
+$border-color: #E6E6E6;
