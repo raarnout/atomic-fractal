@@ -1,6 +1,6 @@
 <div class="c-color-tile{{#if isFirst}} c-color-tile--first-item{{/if}}{{#if isLast}} c-color-tile--last-item{{/if}}{{#if isContrast}} c-color-tile--contrast{{/if}}">
-	<div class="c-color-tile__container c-color-tile__color-code" style="background-color:{{color}};">
-		<span {{#if tweenContent}}class="c-explore-palette__tween-content"{{/if}}>{{color}}</span>
+	<div class="js-left-click-copy c-color-tile__container c-color-tile__color-code" style="background-color:{{color}}" data-left-click-copy="{{color}}">
+		<span {{#if tweenContent}} class="c-explore-palette__tween-content"{{/if}}>{{color}}</span>
 	</div>
 	<div class="c-color-tile__container c-color-tile__tone">{{tone}}</div>
 </div>
