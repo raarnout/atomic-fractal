@@ -1,4 +1,4 @@
 import './scss/styles.scss';
-
-import './js/6-modules/left-click-copy';
+import '2-polyfills/babel-polyfill';
+import '6-modules/left-click-copy';
 

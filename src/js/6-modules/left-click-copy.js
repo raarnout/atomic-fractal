@@ -25,6 +25,8 @@ import forEach from 'lodash/forEach';
 import isElement from 'lodash/isElement';
 import merge from 'lodash/merge';
 
+import { copyTextToClipboard } from '4-utilities/copy-to-clipboard';
+
 const moduleName = 'left-click-copy',
 	attributeNames = {
 		dataLeftClickCopy: 'data-left-click-copy',
@@ -32,16 +34,25 @@ const moduleName = 'left-click-copy',
 	selectors = {
 		base: `.js-${moduleName}`,
 	},
+	propertyNames = {
+		baseElement: Symbol('baseElement'),
+	},
 	defaultConfig = {};
 
 function bindEvents() {
-	this.baseElement.addEventListener("click", handleOnclick.bind(this));
+	this[propertyNames.baseElement].addEventListener(
+		'click',
+		handleOnclick.bind(this)
+	);
 }
 
 function handleOnclick(event) {
-    if(event.currentTarget === this.baseElement) {
-        debugger;
-    }
+	if (event.currentTarget === this[propertyNames.baseElement]) {
+		console.log('handleOnClick');
+		if(copyTextToClipboard(this.dataToCopy)){
+			console.log(`copied '${this.dataToCopy}' to clipboard`);
+		}
+	}
 }
 
 function init() {
@@ -57,8 +68,8 @@ export class LeftClickCopy {
 		if (!isElement(baseElement)) {
 			throw `Unable to create instance of ${moduleName} , no base element has been provided.`;
 		}
-		this.baseElement = baseElement;
-		this.dataToCopy = this.baseElement.getAttribute(
+		this[propertyNames.baseElement] = baseElement;
+		this.dataToCopy = this[propertyNames.baseElement].getAttribute(
 			attributeNames.dataLeftClickCopy
 		);
 		this.config = merge({}, defaultConfig, config);
