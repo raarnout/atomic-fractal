@@ -48,9 +48,8 @@ function bindEvents() {
 
 function handleOnclick(event) {
 	if (event.currentTarget === this[propertyNames.baseElement]) {
-		console.log('handleOnClick');
-		if(copyTextToClipboard(this.dataToCopy)){
-			console.log(`copied '${this.dataToCopy}' to clipboard`);
+		if(copyTextToClipboard(this.dataToCopy)) {
+			console.log('succes copy data');
 		}
 	}
 }
