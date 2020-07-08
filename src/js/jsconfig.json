@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"baseUrl": "./",
+		"paths": {
+			"1-const/*": ["/src/js/1-const/*"],
+			"2-polyfills/*": ["/src/js/2-polyfills/*"],
+			"3-vendor/*": ["/src/js/3-vendor/*"],
+			"4-utilities/*": ["/src/js/4-utilities/*"],
+			"5-endpoints/*": ["/src/js/5-endpoints/*"],
+			"6-modules/*": ["/src/js/6-modules/*"],
+			"7-platform/*": ["/src/js/7-platform/*"]
+		},
+		"target": "ES5"
+	},
+	"include": ["**/*.js"]
+}
