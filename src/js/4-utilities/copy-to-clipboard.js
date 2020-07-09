@@ -23,12 +23,10 @@ const userAgentSupportsSetData = () =>
 const copyTextToClipboard = async (text) => {
 	try {
 		if (userAgentSupportsNavigatorClipboard()) {
-			console.log('Clipboard API');
 			await navigator.clipboard.writeText(text);
 		}
 
 		if (userAgentSupportsSetData()) {
-			console.log('clipboardData API');
 			window.clipboardData.setData('Text', text);
 		}
 
