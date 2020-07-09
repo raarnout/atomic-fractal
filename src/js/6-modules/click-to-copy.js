@@ -13,7 +13,13 @@
  |  The js-click-to-copy is the classname which is targeted on the element
  |  that can be clicked.
  | - data-click-to-copy attribute
- |  The attribute which contains the data to copy.
+ |  The attribute which contains the data to copy. The object consist out of:
+ |
+ |	{
+ |		data: 'actual data to copy',
+ |		backgroundColor: 'optional -> background-color for the messages',
+ |		additionalCSS: 'optional -> CSS class name, for positioning the copySucceedMessages'
+ |	}
  |
  | HTML EXAMPLE:
  | <div class="js-click-to-copy" data-click-to-copy="#AABBCC">
@@ -29,7 +35,7 @@ import { copyTextToClipboard } from '4-utilities/copy-to-clipboard';
 
 const moduleName = 'click-to-copy',
 	attributeNames = {
-		dataClickToCopy: 'data-click-to-copy',
+		dataClickToCopy: 'data-click-to-copy'
 	},
 	CSSClasses = {
 		fadeOut: 'fade-out',
@@ -56,17 +62,24 @@ function bindEvents() {
 }
 
 function createCopyMessageElement() {
-	this[propertyNames.copySucceedElement] = document.createElement('div');
+	this[propertyNames.copySucceedElement] = document.createElement('span');
 	this[propertyNames.copySucceedElement].innerText = this.config.copySucceedMessages;
-	this[propertyNames.copySucceedElement].className = `${CSSClasses.hidden} ${CSSClasses.colorContent}`;
-	this[propertyNames.copySucceedElement].style.backgroundColor = this.dataToCopy;
+	this[propertyNames.copySucceedElement].className = CSSClasses.hidden;
 	this[propertyNames.copySucceedElement].addEventListener('animationend', onAnimationEnd.bind(this));
 	this[propertyNames.baseElement].appendChild(this[propertyNames.copySucceedElement]);
+
+	if(this.copyProperties.additionalCSS) {
+		this[propertyNames.copySucceedElement].classList.add(this.copyProperties.additionalCSS);
+	}
+
+	if(this.copyProperties.backgroundColor) {
+		this[propertyNames.copySucceedElement].style.backgroundColor = this.copyProperties.backgroundColor;
+	}
 }
 
-function handleOnclick(event) {
+async function handleOnclick(event) {
 	if (event.currentTarget === this[propertyNames.baseElement]) {
-		if (copyTextToClipboard(this.dataToCopy) && !this.config.silentCopy) {
+		if (await copyTextToClipboard(this.dataToCopy) && !this.config.silentCopy) {
 			showCopySucceedElement.call(this);
 		}
 	}
@@ -77,10 +90,6 @@ function onAnimationEnd() {
 }
 
 function setup() {
-	if (!this.dataToCopy) {
-		return;
-	}
-
 	if (!this.config.silentCopy) {
 		createCopyMessageElement.call(this);
 	}
@@ -96,14 +105,16 @@ function showCopySucceedElement() {
 export class ClickToCopy {
 	constructor(baseElement, config = {}) {
 		if (!isElement(baseElement)) {
-			throw `Unable to create instance of ${moduleName} , no base element has been provided.`;
+			throw `Unable to create instance of '${moduleName}', no base element has been provided.`;
 		}
 		this[propertyNames.baseElement] = baseElement;
-		this.dataToCopy = this[propertyNames.baseElement].getAttribute(
-			attributeNames.dataClickToCopy
-		);
-		this.config = merge({}, defaultConfig, config);
 
+		this.copyProperties = JSON.parse(this[propertyNames.baseElement].getAttribute(attributeNames.dataClickToCopy));
+		this.dataToCopy = this.copyProperties.data;
+		if(!this.dataToCopy) {
+			throw `Unable to create instance of '${moduleName}', there is no data provided to copy.`;
+		}
+		this.config = merge({}, defaultConfig, config);
 		setup.call(this);
 	}
 }

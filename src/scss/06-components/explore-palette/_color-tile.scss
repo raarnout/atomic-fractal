@@ -57,7 +57,8 @@
 	}
 
 	&__tone {
-		flex-basis: 3.5rem;
+		display: flex;
+		justify-content: center;
 		padding: 1rem;
 		border: 1px solid $border-color;
 		border-right-width: 0;
