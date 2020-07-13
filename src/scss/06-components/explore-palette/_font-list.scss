@@ -1,0 +1,39 @@
+.c-font-list {
+	padding: 1rem;
+	width: 100%;
+
+	&__tile {
+		width: 100%;
+		padding: 1rem;
+		font-size: get-font-size(kilo);
+		position: relative;
+
+		&--border {
+			&:not(:first-of-type) {
+				&:before {
+					content: '';
+					position: absolute;
+					width: 100%;
+					border-top: 1px solid #e6e6e6;
+					top: 0;
+					left: 0;
+				}
+			}
+		}
+	}
+
+	&__style-summary {
+		font-size: get-font-size(milli);
+		font-weight: 400;
+		margin-bottom: 8px;
+		font-family: 'OpenSans';
+	}
+
+	&--open-sans {
+		font-family: 'OpenSans';
+	}
+
+	&--amatic-sc {
+		font-family: 'AmaticSC';
+	}
+}

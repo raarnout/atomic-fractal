@@ -1,0 +1,33 @@
+@function get-font-size($size: centi, $fontType: body) {
+	// Make sure the requested font size is a valid key. When it doesn't exist
+	// in the fallback map it is not a valid key.
+	@if (map-get($default-font-sizes, $size) == null) {
+		@error '#{$size} is not a valid value';
+	}
+
+	// Get the default value for the line height.
+	$defaultValue: map-get($default-font-sizes, $size);
+
+	// Check if font-faces have been declared in the style.
+	@if variable-exists(font-faces) {
+		// Check if overrides have been declared for the requested font type.
+		@if map-get($map: $font-faces, $key: $fontType ) {
+			// Get the overrides for the requested font type and create a copy
+			// of the fall back font-size which we can modify.
+			$map: map-get($map: $font-faces, $key: $fontType);
+			$font-sizes: $default-font-sizes;
+
+			// Check if the font type has overrides for the font-sizes.
+			@if map-get($map: $map, $key: sizes) != null {
+				// Merge the overrides into the default values.
+				$font-sizes: map-merge($map1: $default-font-sizes, $map2: map-get($map, sizes));
+			}
+
+			// Return the requested font-sizes.
+			@return map-get($map: $font-sizes, $key: $size);
+		}
+	}
+
+	// There are no overrides, return the default value.
+	@return $defaultValue;
+}

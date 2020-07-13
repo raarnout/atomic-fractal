@@ -1,0 +1,49 @@
+.o-list-cols {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+
+	li {
+		flex-basis: 1rem;
+		flex-grow: 1;
+		flex-shrink: 0;
+	}
+
+	&--two {
+		> li {
+			flex-basis: percentage(6/12);
+		}
+	}
+
+	&--three {
+		> li {
+			flex-basis: percentage(4/12);
+		}
+	}
+
+	&--four {
+		> li {
+			flex-basis: percentage(3/12);
+		}
+	}
+
+	&--five {
+		> li {
+			flex-basis: 20%;
+		}
+	}
+
+	&--six {
+		> li {
+			flex-basis: percentage(2/12);
+		}
+	}
+
+	&--twelve {
+		> li {
+			flex-basis: percentage(1/12);
+		}
+	}
+
+
+}
