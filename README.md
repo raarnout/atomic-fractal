@@ -1,1 +1,1 @@
-SASS Stylesheet, based on the Atomic Design methodology, presented in fractal.
+Component library, based on the Atomic Design methodology, presented in fractal.
