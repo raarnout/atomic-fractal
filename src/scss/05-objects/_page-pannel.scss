@@ -1,0 +1,31 @@
+/**
+ * we use page-pannels to create full width background colors.
+ * Due to border collapse on block elements, we don't set margin, but we use
+ * padding to create space between pannels.
+ */
+.o-page-pannel {
+	@include mq($until: mobile) {
+		padding-bottom: map-get($base-spacings, mobile) ;
+		padding-top: map-get($base-spacings, mobile);
+	}
+	
+	@each $breakpoint, $spacing in $base-spacings {
+		@include mq($from: $breakpoint) {
+			padding-bottom: $spacing;
+			padding-top: $spacing;
+		}
+	}
+
+	&--brand {
+		background-color: get-color(brand, base);
+	}
+
+	&--brand-secondary {
+		background-color: get-color(brand, secondary);
+	}
+
+	&--seamless {
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+}

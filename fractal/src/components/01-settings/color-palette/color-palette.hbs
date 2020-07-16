@@ -1,34 +1,32 @@
-<div class="c-color-palette">
-	<div class="c-explore-palette">
-		<div class="c-explore-palette__strip">
-			{{#each primaryColors}}
-				{{> @color-tile }}
-			{{/each}}
-		</div>
-		<div class="c-explore-palette__footer">
-			<span>get-color(brand, <b>$tone</b>)</span>
-		</div>
+<div class="c-explore-palette">
+	<div class="c-explore-palette__strip">
+		{{#each primaryColors}}
+			{{> @color-tile }}
+		{{/each}}
 	</div>
-
-	<div class="c-explore-palette">
-		<div class="c-explore-palette__strip">
-			{{#each secondaryColors}}
-				{{> @color-tile }}
-			{{/each}}
-		</div>
-		<div class="c-explore-palette__footer">
-			<span>get-color(brand, <b>$tone</b>)</span>
-		</div>
+	<div class="c-explore-palette__footer">
+		<span>get-color(brand, <b>$tone</b>)</span>
 	</div>
+</div>
 
-	<div class="c-explore-palette">
-		<div class="c-explore-palette__strip">
-			{{#each greyscaleColors}}
-				{{> @color-tile }}
-			{{/each}}
-		</div>
-		<div class="c-explore-palette__footer">
-			<span>get-color(greyscale, <b>$tone</b>)</span>
-		</div>
+<div class="c-explore-palette">
+	<div class="c-explore-palette__strip">
+		{{#each secondaryColors}}
+			{{> @color-tile }}
+		{{/each}}
+	</div>
+	<div class="c-explore-palette__footer">
+		<span>get-color(brand, <b>$tone</b>)</span>
+	</div>
+</div>
+
+<div class="c-explore-palette c-explore-palette">
+	<div class="c-explore-palette__strip">
+		{{#each greyscaleColors}}
+			{{> @color-tile }}
+		{{/each}}
+	</div>
+	<div class="c-explore-palette__footer">
+		<span>get-color(greyscale, <b>$tone</b>)</span>
 	</div>
 </div>

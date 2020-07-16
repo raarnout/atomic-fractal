@@ -1,0 +1,53 @@
+$default-breakpoint: desktop;
+// gutters are space between grid-columns and grid-rows
+$base-gutters: (
+    mobile : 1.2rem, // 12px
+    tablet : 1.8rem, // 18px
+    desktop: 2.4rem, // 24px
+    wide   : 2.4rem  // 24px
+);
+$grid-gutter: map-get($base-gutters, $default-breakpoint);
+
+// base-spacings are used around content inside a container.
+$base-spacings: (
+    mobile : 1.2rem, // 12px
+    tablet : 1.8rem, // 18px
+    desktop: 2.4rem, // 24px
+    wide   : 2.4rem  // 24px
+) !default;
+
+$default-font-families: (
+	body: (OpenSans, sans-serif),
+	customFont: (AmaticSC),
+	icon: (FontAwesome)
+);
+
+$default-font-sizes: (
+	tera  : 4.8rem,   // 48px
+	giga  : 4.8rem,   // 48px
+	mega  : 4.8rem,   // 48px
+	kilo  : 3.4rem,   // 34px
+	hecto : 2.6rem,   // 26px
+	deca  : 2.0rem,   // 20px
+	deci  : 1.8rem,   // 18px
+	centi : 1.6rem,   // 16px
+	milli : 1.4rem,   // 14px
+	micro : 1.2rem,   // 12px
+	nano  : 1.2rem    // 12px
+);
+
+// we use 1140px because it is devidebale by 12.
+$container-max-width: 1188px; // 1140px + 2 * 24px ($base-spacing-unit desktop/wide)
+
+// pre-set $mq-breakpoints variable, so it will not be set with the !default 
+// values inside the 02-toos/vendor/sass-mq.scss file
+// need to be set in pixels
+$mq-breakpoints: (
+    mobile    : 280px,
+    tablet    : 768px,
+    desktop	  : 1024px,
+    wide      : 1440px
+);
+
+
+

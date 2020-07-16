@@ -1,0 +1,17 @@
+.o-container {
+	margin: 0 auto;
+	max-width: $container-max-width;
+	width: 100%;
+
+	@include mq($until: mobile) {
+		padding-left: map-get($base-spacings, mobile) ;
+		padding-right: map-get($base-spacings, mobile);
+	}
+
+	@each $breakpoint, $spacing in $base-spacings {
+		@include mq($from: $breakpoint) {
+			padding-left: $spacing;
+			padding-right: $spacing;
+		}
+	}
+}

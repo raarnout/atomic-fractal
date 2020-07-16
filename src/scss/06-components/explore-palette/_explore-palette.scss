@@ -4,6 +4,10 @@
 	border-radius: 1.5rem;
 	border: 1px solid $border-color;
 
+	+ .c-explore-palette {
+		margin-top: 3rem;
+	}
+
 	&__strip {
 		display: flex;
 		width: 100%;	
@@ -27,7 +31,7 @@
 		border-bottom-right-radius: inherit;
 	}
 
-	&--with-header {
+	&--flatten-bottom-radius {
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
 		#{$c}__header {
@@ -35,7 +39,7 @@
 		}
 	}
 
-	&--with-footer {
+	&--flatten-top-radius {
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
 		#{$c}__footer {

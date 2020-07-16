@@ -3,10 +3,11 @@
 "01-settings/font-faces/font-awesome",
 "01-settings/font-faces/open-sans.scss",
 "01-settings/colors",
-"01-settings/typography",
+"01-settings/const",
 
 "02-tools/functions/get-color",
 "02-tools/functions/get-font-size",
+"02-tools/mixins/clearfix",
 "02-tools/vendor/sass-mq",
 
 "03-generic/box-sizing",
@@ -16,13 +17,16 @@
 "04-elements/html",
 "04-elements/list",
 
-"05-objects/o-list-cols",
+"05-objects/container",
+"05-objects/layout",
+"05-objects/list-cols",
+"05-objects/page-pannel",
 
-"06-components/color-palette",
 "06-components/explore-palette/color-tile",
 "06-components/explore-palette/explore-palette",
 "06-components/explore-palette/font-list",
 "06-components/explore-palette/icon-tile",
 "06-components/logo",
 
-"07-utilities/display";
+"07-utilities/display",
+"07-utilities/widths";

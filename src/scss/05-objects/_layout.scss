@@ -1,0 +1,47 @@
+@mixin make-row($breakpoint) {
+	@include clearfix;
+	margin-left: -(map-get($base-gutters, $breakpoint) / 2);
+}
+
+@mixin make-col($breakpoint) {
+	float: left;
+	min-height: 1px;
+	padding-left: map-get($base-gutters, $breakpoint);
+	position: relative;
+}
+
+.o-layout {
+	width: 100%;
+
+	/* ---------------------------------- *\
+		ELEMENTS
+	\* ---------------------------------- */
+
+	&__row {
+		@include make-row(mobile);
+	}
+
+	&__col {
+		@include make-col(mobile);
+	}
+}
+
+/* ---------------------------------- *\
+	MEDIA QUERIES
+\* ---------------------------------- */
+
+@each $breakpoint, $width in $mq-breakpoints {
+	@include mq($from: $breakpoint) {
+		.o-layout {
+			&__row {
+				@include make-row($breakpoint);
+			}
+
+			&__col {
+				@include make-col($breakpoint);
+			}
+		}
+	}
+}
+
+/* -- MEDIA QUERIES ----------------- */
